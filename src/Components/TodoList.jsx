@@ -45,15 +45,6 @@ const TodoList = () => {
         setModal(!modal);
     }
 
-    //Function to change the status depending upon the Date assigned
-    const calculateStatus = () => {
-        let currentDate = new Date();
-        if (currentStatus === "Assigned") {
-            setCurrentStatus ( taskObj.EndDate <= currentDate ? "Pending" : "In-Progress");
-        }
-        taskObj.Status = currentStatus;
-    };
-
     // Saves the tasks when Tasks are entered through CreateTasks form into Tasks List
     const saveTask = (taskObj) => {
         let tempList = [...taskList];
