@@ -6,7 +6,7 @@ This project consists of a Task Tracker application developed using both React J
 ### Features - 
 
 React JS Version: A fully functional task tracker app.\
-React Native Version: A task tracker app developed using React Native (some setup required). It works with limited functionalities as compared to React js counterpart.
+React Native Version: A task tracker app developed using React Native for android users (some setup required). It works with limited functionalities as compared to React js counterpart.
 
 ### Libraries Used
 
@@ -23,6 +23,13 @@ Feel free to open an issue or submit a pull request for any improvements or sugg
 
 # Images for React Native
 
-![Task Tracker App](./images/app1.png) 
+![Task Tracker App](./images/app4.png) 
 ![Task Tracker App](./images/app2.png) 
 ![Task Tracker App](./images/app3.png)
+
+
+# Images for React Js
+
+![Task Tracker App](./images/web1.png)
+![Task Tracker App](./images/web2.png)
+![Task Tracker App](./images/web3.png)
