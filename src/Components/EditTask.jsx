@@ -14,7 +14,23 @@ const EditTask = ({ isOpen, index, toggle, taskObj, taskList, setTaskList }) => 
         EndDate: taskObj.EndDate,
         Status: taskObj.Status
     });
+    const findTaskByName = (name) => {
+        for (let i = 0; i < taskList.length; i++) {
+            if (taskList[i].Name === name) {
+                return { ...taskList[i] };
+            }
+        }
+        return null; // Return null if no matching task is found
+    };
 
+    const handleEdit = () => {
+        const foundTask = findTaskByName(index);
+        if (foundTask) {
+            setFormValues({
+                foundTask
+            });
+        }
+    };
     // Updating as per the fetched details through modal form
     const handleUpdate = () => {
         const updatedTaskList = taskList.map((task, idx) => {
@@ -32,8 +48,13 @@ const EditTask = ({ isOpen, index, toggle, taskObj, taskList, setTaskList }) => 
         toggle();
     };
 
+    const handleBothClicks = () => {
+        handleEdit();
+        handleUpdate();
+    };
+
     return (
-        <Modal isOpen={isOpen} toggle={toggle}>
+        <Modal isOpen={isOpen} toggle={toggle} >
             <ModalHeader toggle={toggle}>Update Task</ModalHeader>
             <ModalBody>
                 <form className='formGroup'>
@@ -103,7 +124,7 @@ const EditTask = ({ isOpen, index, toggle, taskObj, taskList, setTaskList }) => 
                 </form>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary" onClick={handleUpdate}>Update</Button>{' '}
+                <Button color="primary" onClick={handleBothClicks}>Update</Button>{' '}
                 <Button color="secondary" onClick={toggle}>Cancel</Button>
             </ModalFooter>
         </Modal>
