@@ -19,7 +19,7 @@ const DeleteTask = ({ isOpen, toggle, taskObj, index, taskList, setTaskList }) =
             <Modal isOpen={isOpen} toggle={toggle}>
                 <ModalHeader>Delete Task</ModalHeader>
                 <ModalBody>
-                    <p>Are You Sure to delete this Task {index}?</p>
+                    <p>Are You Sure to delete this Task {taskObj.Name}?</p>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={OnDelete}>Delete</Button>
