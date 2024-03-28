@@ -3,23 +3,22 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 //Component to delete the tasks
 const DeleteTask = ({ isOpen, toggle, taskObj, index, taskList, setTaskList }) => {
-    //Performs deletion on passed TASKLIST through splice method
+    //Performs deletion on passed TASKLIST 
     const OnDelete = () => {
-        const updatedTaskList = taskList.map((task) => {
-            if (taskList[index].Name === task.Name) {
-                let tempList = [...taskList];
-                tempList.splice(index, 1);
-                setTaskList(tempList);
-            }})
-        toggle();               //Closes the form
+        const updatedTaskList = taskList.filter(task => task.Name !== index);
+        
+        setTaskList(updatedTaskList);
+        
+        toggle();  // Closes the form
     };
+    
 
     return (
         <> 
             <Modal isOpen={isOpen} toggle={toggle}>
                 <ModalHeader>Delete Task</ModalHeader>
                 <ModalBody>
-                    <p>Are You Sure to delete this Task {taskObj.Name}?</p>
+                    <p>Are You Sure to delete this Task {}?</p>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={OnDelete}>Delete</Button>
