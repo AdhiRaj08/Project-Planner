@@ -21,14 +21,10 @@ After performing filter or sorting operations, it is recommended to reset the wo
 Feel free to open an issue or submit a pull request for any improvements or suggestions.
 
 
-# Images for React Native
+# Images
 
 ![Task Tracker App](./images/app4.png) 
 ![Task Tracker App](./images/app2.png) 
 ![Task Tracker App](./images/app3.png)
-
-
-# Images for React Js
-
 ![Task Tracker App](./images/web2.png)
 ![Task Tracker App](./images/web3.png)
