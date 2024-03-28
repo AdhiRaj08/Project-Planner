@@ -30,6 +30,5 @@ Feel free to open an issue or submit a pull request for any improvements or sugg
 
 # Images for React Js
 
-![Task Tracker App](./images/web1.png)
 ![Task Tracker App](./images/web2.png)
 ![Task Tracker App](./images/web3.png)
