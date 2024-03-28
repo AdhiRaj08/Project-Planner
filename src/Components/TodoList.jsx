@@ -134,7 +134,7 @@ const TodoList = () => {
         <TaskListContext.Provider value={{ taskList, updateListArray }}>
             <div className="header"> 
                 <h3 className='mt-2'>Task_Board</h3>
-                <img  src={require('./user_logo.png')} alt="user_logo" style = {{borderRadius:'14px', height:'1.9em', paddingRight:"10px"}}/>
+                <img  src={require('./user_logo.png')} alt="user_logo" style = {{borderRadius:'14px', height:'1.9em'}}/>
             </div>
             <button className="btn btn-primary" onClick={() => setModal(true)}>Add New Task</button>
             <hr />
