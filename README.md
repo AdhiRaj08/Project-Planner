@@ -1,4 +1,4 @@
-# Task Tracker App
+# Project Planner App
 
 This project consists of a Task Tracker application developed using both React JS and React Native. While the React JS version is fully functional and can be directly used from this repository, the React Native version was developed using an online compiler. As a result, some of the required packages and dependencies might not be readily available, requiring additional setup steps.
 ## Available Scripts
